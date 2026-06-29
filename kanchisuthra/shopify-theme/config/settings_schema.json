@@ -1,0 +1,122 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Kanchisuthra",
+    "theme_author": "Kanchisuthra",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "",
+    "theme_support_url": ""
+  },
+  {
+    "name": "Branding",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 80,
+        "max": 300,
+        "step": 10,
+        "unit": "px",
+        "label": "Logo Width",
+        "default": 180
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary (Gold)",
+        "default": "#C8A14A"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Secondary (Maroon)",
+        "default": "#6B1028"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent (Forest Green)",
+        "default": "#1E4735"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background",
+        "default": "#FAF8F5"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Body Text",
+        "default": "#222222"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "playfair_display_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "poppins_n4"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram"
+      },
+      {
+        "type": "url",
+        "id": "facebook_url",
+        "label": "Facebook"
+      },
+      {
+        "type": "url",
+        "id": "pinterest_url",
+        "label": "Pinterest"
+      },
+      {
+        "type": "url",
+        "id": "whatsapp_url",
+        "label": "WhatsApp"
+      }
+    ]
+  },
+  {
+    "name": "Buttons",
+    "settings": [
+      {
+        "type": "range",
+        "id": "button_border_radius",
+        "min": 0,
+        "max": 30,
+        "step": 2,
+        "unit": "px",
+        "label": "Button Border Radius",
+        "default": 4
+      }
+    ]
+  }
+]

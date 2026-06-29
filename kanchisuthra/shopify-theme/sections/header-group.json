@@ -1,0 +1,28 @@
+{
+  "type": "shopify://apps/sections",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "show_announcement": true,
+        "announcement_text": "Free Shipping on Orders above ₹1999 | Pure Handloom Guaranteed",
+        "announcement_link": "",
+        "bg_color": "#6B1028",
+        "text_color": "#FAF8F5"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_width": 200,
+        "show_line_separator": true,
+        "sticky_header_type": "on-scroll-up",
+        "show_cart_icon": true,
+        "show_wishlist_icon": true,
+        "show_search_icon": true
+      }
+    }
+  },
+  "order": ["announcement-bar", "header"]
+}

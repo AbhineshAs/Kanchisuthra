@@ -1,0 +1,15 @@
+{
+  "type": "shopify://apps/sections",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "copyright_text": "© 2025 Kanchisuthra. All Rights Reserved.",
+        "show_social_links": true,
+        "show_newsletter": true
+      }
+    }
+  },
+  "order": ["footer"]
+}

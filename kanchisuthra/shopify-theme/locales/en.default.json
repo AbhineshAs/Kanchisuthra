@@ -1,0 +1,58 @@
+{
+  "general": {
+    "continue_shopping": "Continue Shopping",
+    "search": "Search"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "buy_it_now": "Buy it Now",
+      "description": "Description",
+      "quantity": "Quantity",
+      "regular_price": "Regular price",
+      "sale_price": "Sale price",
+      "unit_price": "Unit price",
+      "choose_options": "Choose options"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Cart",
+      "empty": "Your cart is empty",
+      "checkout": "Check out",
+      "subtotal": "Subtotal",
+      "update": "Update Cart",
+      "remove": "Remove",
+      "discount": "Discount",
+      "items_with_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    }
+  },
+  "customer": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot Password?",
+      "sign_in": "Sign In",
+      "create_account": "Create Account"
+    },
+    "account": {
+      "title": "My Account",
+      "orders": "Order History"
+    }
+  },
+  "sections": {
+    "newsletter": {
+      "heading": "Join Our World",
+      "subtext": "Subscribe for exclusive offers and new arrivals.",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "success": "Thank you for subscribing!"
+    }
+  }
+}

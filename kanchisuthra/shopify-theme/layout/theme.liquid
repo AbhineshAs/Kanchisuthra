@@ -1,25 +1,55 @@
-{% comment %}
-  Layout: theme.liquid - Base layout for Kanchisuthra premium theme
-{% endcomment %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ shop.locale }}">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {%- render 'meta-tags' -%}
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" />
-  <link rel="stylesheet" href="{{ 'aos.css' | asset_url }}" />
-  <script src="{{ 'aos.js' | asset_url }}" defer></script>
-  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged &ldquo;{{ current_tags | join: ', ' }}&rdquo;{% endif %}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ shop.name }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  {%- if page_description -%}
+    <meta property="og:description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {%- if page_image -%}
+    <meta property="og:image" content="http:{{ page_image | img_url: '1200x628' }}">
+    <meta property="og:image:secure_url" content="https:{{ page_image | img_url: '1200x628' }}">
+  {%- endif -%}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title | escape }}">
+  {%- if page_description -%}
+    <meta name="twitter:description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {%- if page_image -%}
+    <meta name="twitter:image" content="https:{{ page_image | img_url: '1200x628' }}">
+  {%- endif -%}
+
   {{ content_for_header }}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
 </head>
 <body>
-  {%- render 'announcement-bar' -%}
-  {%- render 'header' -%}
-  {{ content_for_layout }}
-  {%- render 'footer' -%}
-  {{ content_for_footer }}
+  {%- sections 'header-group' -%}
+
+  <main id="MainContent" role="main" tabindex="-1">
+    {{ content_for_layout }}
+  </main>
+
+  {%- sections 'footer-group' -%}
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  {{ 'theme.js' | asset_url | script_tag }}
 </body>
 </html>

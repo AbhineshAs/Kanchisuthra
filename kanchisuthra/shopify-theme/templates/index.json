@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "hero-banner": {
+      "type": "hero-banner",
+      "settings": {}
+    },
+    "category-grid": {
+      "type": "category-grid",
+      "settings": {}
+    },
+    "featured-products": {
+      "type": "featured-products",
+      "settings": {}
+    },
+    "new-arrivals": {
+      "type": "new-arrivals",
+      "settings": {}
+    },
+    "why-choose-us": {
+      "type": "why-choose-us",
+      "settings": {}
+    },
+    "story-section": {
+      "type": "story-section",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero-banner",
+    "category-grid",
+    "featured-products",
+    "new-arrivals",
+    "why-choose-us",
+    "story-section",
+    "testimonials",
+    "newsletter"
+  ]
+}

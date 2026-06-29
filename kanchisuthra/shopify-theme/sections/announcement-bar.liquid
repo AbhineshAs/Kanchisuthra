@@ -1,0 +1,56 @@
+{% if section.settings.show_announcement %}
+  <div class="announcement-bar" style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
+    <div class="announcement-bar__inner container">
+      {% if section.settings.announcement_link != blank %}
+        <a href="{{ section.settings.announcement_link }}" class="announcement-bar__text" style="color: {{ section.settings.text_color }};">
+          {{ section.settings.announcement_text }}
+        </a>
+      {% else %}
+        <p class="announcement-bar__text">{{ section.settings.announcement_text }}</p>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "class": "section-announcement-bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show Announcement Bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "Free Shipping on Orders above ₹1999 | Pure Handloom Guaranteed"
+    },
+    {
+      "type": "url",
+      "id": "announcement_link",
+      "label": "Announcement Link"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#6B1028"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FAF8F5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

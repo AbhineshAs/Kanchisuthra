@@ -1,0 +1,25 @@
+{% comment %}
+  Layout: theme.liquid - Base layout for Kanchisuthra premium theme
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {%- render 'meta-tags' -%}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" />
+  <link rel="stylesheet" href="{{ 'aos.css' | asset_url }}" />
+  <script src="{{ 'aos.js' | asset_url }}" defer></script>
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  {{ content_for_header }}
+</head>
+<body>
+  {%- render 'announcement-bar' -%}
+  {%- render 'header' -%}
+  {{ content_for_layout }}
+  {%- render 'footer' -%}
+  {{ content_for_footer }}
+</body>
+</html>

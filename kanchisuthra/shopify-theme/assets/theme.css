@@ -1,0 +1,43 @@
+/* Kanchisuthra Theme - Base CSS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-ivory: #FAF8F5;
+  --color-gold: #C8A14A;
+  --color-maroon: #6B1028;
+  --color-forest: #1E4735;
+  --color-charcoal: #222222;
+  --color-white: #FFFFFF;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior:smooth;}
+body {font-family:var(--font-body);background-color:var(--color-ivory);color:var(--color-charcoal);line-height:1.6;}
+
+h1,h2,h3,h4,h5,h6 {font-family:var(--font-heading);color:var(--color-maroon);}
+
+a {color:var(--color-gold);text-decoration:none;transition:color .3s;}
+a:hover {color:var(--color-forest);}
+
+.container {width:90%;max-width:1400px;margin:0 auto;}
+
+.btn {display:inline-block;padding:.75rem 1.5rem;background-color:var(--color-gold);color:var(--color-white);font-weight:500;border:none;border-radius:4px;cursor:pointer;transition:background-color .3s,transform .2s;}
+.btn:hover {background-color:var(--color-forest);transform:translateY(-2px);}
+
+.header {position:sticky;top:0;background-color:var(--color-white);box-shadow:0 2px 5px rgba(0,0,0,.1);z-index:1000;}
+.footer {background-color:var(--color-charcoal);color:var(--color-white);padding:2rem 0;}
+
+.text-center{ text-align:center; }
+.mt-1{margin-top:.5rem;}.mt-2{margin-top:1rem;}.mb-1{margin-bottom:.5rem;}.mb-2{margin-bottom:1rem;}
+
+[data-aos]{opacity:0;transition:opacity .6s,transform .6s;}
+[data-aos].aos-animate{opacity:1;}
+
+.grid{display:grid;gap:1rem;}
+.grid-cols-2{grid-template-columns:repeat(2,1fr);}
+.grid-cols-3{grid-template-columns:repeat(3,1fr);}
+.grid-cols-4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:768px){.grid-cols-4,.grid-cols-3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.grid-cols-2,.grid-cols-3,.grid-cols-4{grid-template-columns:1fr;}}
